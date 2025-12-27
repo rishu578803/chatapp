@@ -25,6 +25,12 @@ app.use(
   })
 );
 
+app.use("/test", (req, res) => {
+  res.status(200).json({
+    message: "success",
+  });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
